@@ -1,12 +1,12 @@
 {
-  "name": "WTF: PWA",
-  "short_name": "WTF: PWA",
-  "theme_color": "#2D2241",
-  "background_color": "#2D2241",
+  "name": "HydroApp",
+  "short_name": "HydroApp",
+  "theme_color": "#2E86AB",
+  "background_color": "#2E86AB",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/wtf-webpack-starter/",
-  "start_url": "/wtf-webpack-starter/",
+  "scope": "/HydroApp/",
+  "start_url": "/HydroApp/",
   "icons": [
     {
       "src": "pwa/manifest-icon-192.png",
