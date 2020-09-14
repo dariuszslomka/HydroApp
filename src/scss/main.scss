@@ -4,6 +4,24 @@
 @import "modules/hello.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+@keyframes shake {
+  0% {
+    transform: rotate(-5deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 html {
   box-sizing: border-box;
 }
@@ -42,6 +60,10 @@ body {
   justify-content: center;
   margin-bottom: 48px;
 
+  &--animated {
+    animation: shake linear 1s;
+  }
+
   &__number {
     margin: 0;
     display: inline-block;
@@ -71,4 +93,16 @@ body {
   color: #f5e5e7;
   background-color: transparent;
   border: 0;
+}
+
+.green {
+  color: transparent;  
+  text-shadow: 0 0 0 green;
+  margin-right: 10px;
+}
+
+.red {
+  color: transparent;  
+  text-shadow: 0 0 0 red;
+  margin-right: 10px;
 }

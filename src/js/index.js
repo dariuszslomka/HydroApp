@@ -5,9 +5,8 @@ import { registerSW } from "./pwa.js";
 registerSW();
 
 let counter = getGlassCounter();
-if(counter)
-{
-    refreshGlassNumber(counter);
+if (counter) {
+  refreshGlassNumber(counter);
 }
 
 let addButton = document.querySelector(".add-button--js");
@@ -42,4 +41,12 @@ function getGlassCounter() {
 function setGlassCounter(glassNumber) {
   localStorage.setItem("glassCounter", glassNumber);
   refreshGlassNumber(glassNumber);
+  animateGlass();
+}
+
+function animateGlass() {
+    let glass = document.querySelector(".glass--js");
+    glass.classList.add('glass--animated');
+    setTimeout(function() { glass.classList.remove('glass--animated'); }, 1000);   
+    document.style.webkitAnimationPlayState = "running";
 }
