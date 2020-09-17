@@ -42,11 +42,19 @@ function setGlassCounter(glassNumber) {
   localStorage.setItem("glassCounter", glassNumber);
   refreshGlassNumber(glassNumber);
   animateGlass();
+  animateWater();
 }
 
 function animateGlass() {
     let glass = document.querySelector(".glass--js");
     glass.classList.add('glass--animated');
     setTimeout(function() { glass.classList.remove('glass--animated'); }, 1000);   
-    document.style.webkitAnimationPlayState = "running";
+
+}
+
+function animateWater()
+{
+    let waterImage = document.querySelector(".water-image--js");
+    waterImage.classList.add('water-image--animated');
+    setTimeout(function() { waterImage.classList.remove('water-image--animated'); }, 1000);   
 }
