@@ -30,7 +30,8 @@ function refreshGlassNumber(glassNumber) {
 }
 
 function getGlassCounter() {
-  let glassCounter = localStorage.getItem("glassCounter");
+  const todayCounter = new Date().toISOString().slice(0, 10);
+  let glassCounter = localStorage.getItem(todayCounter);
   if (glassCounter) {
     return parseInt(glassCounter);
   } else {
@@ -39,7 +40,8 @@ function getGlassCounter() {
 }
 
 function setGlassCounter(glassNumber) {
-  localStorage.setItem("glassCounter", glassNumber);
+  const todayCounter = new Date().toISOString().slice(0, 10);
+  localStorage.setItem(todayCounter, glassNumber);
   refreshGlassNumber(glassNumber);
   animateGlass();
   animateWater();
